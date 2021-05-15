@@ -1,0 +1,759 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+.navbar{
+    background-color: white;
+    padding: 1px 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 1;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar a {
+    float: left;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.navbar .logo{
+    font-size: 30px;
+    flex: 1;
+    color: black;
+}
+
+.navbar-right a:hover{
+    display: block;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid black;
+    background: black;
+    color: white;
+}
+
+.navbar-right a.active{
+    display: block;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid black;
+    background: black;
+    color: white;
+}
+
+.navbar-right a{
+    transition: 0.5s;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart i {
+    font-size: x-large;
+}
+
+i:hover{
+    display: block;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid black;
+    background: black;
+    color: white;
+}
+
+.badge{
+    position: relative;
+    top: -15px;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.search-box{
+    position: relative;
+    top: 3px;
+    left: 10px;
+    transition: all 1s;
+    width: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+.search{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fas{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+.search-box:hover{
+    width: 200px;
+    cursor: pointer;
+}
+
+.search-box:hover input{
+    display: block;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid black;
+}
+
+.search-box:hover .fas{
+    background: #07051a;
+    color: white;
+}
+
+.login{
+    background: white;
+    text-transform: uppercase;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login:hover {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid black;
+    background: black;
+    color: white;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.row:after, .row:before {
+	box-sizing: border-box;
+}
+
+.col{
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    margin: 70px auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.product-info {
+	position: relative;
+	top: 10px;
+    left: 80px;
+	width: 100%;
+	padding: 0 100px;
+	color:black;
+}
+
+.product-name h1 {
+	font-weight: 900;
+	font-size: xxx-large;
+	color: black;
+}
+
+.product-price {
+	font-weight: 900;
+	font-size: xx-large;
+	color: black;
+}
+
+
+.size-wrapper {
+    display: flex;
+	flex-flow: row;
+}
+
+.size-wrapper div {
+	font-weight: 900;
+	margin: 5px;
+	width: 20px;
+    height: 20px;
+	border-radius: 30%;
+	padding: 7px;
+	border: 2px solid black;
+	color: grey;
+    text-align: center;
+}
+
+.size-wrapper div.active {
+	border: 2px solid black;
+	color: black;
+}
+
+.size-wrapper div:hover {
+	border: 2px solid black;
+	color: black;
+	cursor: pointer;
+}
+
+.addto {
+	font-weight: 900;
+	padding: 15px 60px;
+	border-radius: 30px;
+	border: 2px solid black;
+	background-color: white;
+	color: black;
+	transition: .5s;
+}
+
+.addto:hover {
+	cursor: pointer;
+	background-color: black;
+	color: white;
+}
+
+.img-wrapper img {
+    float: right;
+    margin-top: -230px;
+    padding-right: 20px;
+	height: auto;
+	width: 35%;
+	transform: rotate(-35deg);
+}
+
+.bounce {
+	animation-name: bounce;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	} 50% {
+		transform: translateY(-5px);
+	} 100% {
+		transform: translateY(0);
+	}
+}
+
+.title{
+    text-align: center;
+}
+
+.cards{
+    margin: 0 auto;
+    padding-top: 80px;
+    max-width: 1000px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 2fr));
+    grid-auto-rows: auto;
+    padding-bottom: 20px;
+}
+
+.container{
+    position: relative;
+    overflow: hidden;
+}
+
+.container .card {
+    position: relative;
+    width: 220px;
+    height: 400px;
+    background: #232323;
+    border-radius: 20px;
+}
+
+.container .card .card_image{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container .card:hover .card_image{
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.container .card .card_image .image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    width: 90%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+}
+
+.container .card .content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+}
+
+.container .card:hover .content{
+    height: 230px;
+}
+
+.container .card .content h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.container .card .content .price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card:hover .content .price{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card .content .price h4{
+    position: relative;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.container .card .content .size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card:hover .content .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container .card .content .size h4{
+    color:#fff;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container .card .content .size span{
+    width: 26px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 18px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.container .card .content .size span:hover{
+    background: #9bdc28;
+}
+
+.container .card .content .btn button {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .card .content .btn button:hover {
+    background: #9bdc28;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px 320px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .cntr{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .cntr h2{
+    color: #fff;
+    font-weight: 500;
+}
+
+.follow{
+    display: flex;
+}
+
+.follow li{
+    list-style: none;
+}
+
+.follow li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.follow li a:hover{
+    background: white;
+}
+
+.follow li a .fab {
+    color: white;
+    font-size: 20px;
+}
+
+.quicklinks{
+    position: relative;
+    width: 25%;
+    left: 100%;
+    bottom: 40%;
+}
+
+.quicklinks ul li{
+    list-style: none;
+}
+
+.quicklinks ul li a{
+    color: #999;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.quicklinks ul li a:hover{
+    color: #fff;
+}
+
+.copyrighttext{
+    width: 100%;
+    background: #181818;
+    padding: 8px;
+    text-align: center;
+    color: #999;
+}
+
+.shopping-container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.shopping-container > h1{
+	padding: 20px 0;
+}
+
+.shopping-cart{
+	display: flex;
+}
+
+.shopping-products{
+	flex: 0.75;
+}
+
+.shopping-product{
+	display: flex;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	border: 1px solid silver;
+	margin-bottom: 20px;
+}
+
+.shopping-product:hover{
+	border: none;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+	transform: scale(1.01);
+}
+
+.shopping-product > img{
+	width: 200px;
+	height: 100px;
+    margin-top: 100px;
+    margin-left: 120px;
+    transform: translate(-50%,-50%) rotate(-25deg);
+}
+
+.shopping-product-info{
+	padding: 20px;
+	width: 100%;
+    margin-left: -40px;
+	position: relative;
+}
+
+.shopping-product-name, .shopping-product-price{
+	margin-bottom: 20px;
+}
+
+.shopping-product-remove{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 25px;
+	background-color: white;
+	color: black;
+	cursor: pointer;
+	border-radius: 5px;
+    border: 1px solid black;
+}
+
+.shopping-product-remove:hover{
+	background-color: black;
+	color:  white;
+	font-weight: 600;
+	border: 1px solid black;
+}
+
+.shopping-product-quantity > input{
+	width: 40px;
+	padding: 5px;
+	text-align: center;
+}
+
+.shopping-cart-total{
+	flex: 0.25;
+	margin-left: 20px;
+	padding: 20px;
+	height: 240px;
+	border: 1px solid silver;
+	border-radius: 5px;
+}
+
+.shopping-cart-total p{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
+.shopping-cart-total a{
+	display: block;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background-color: white;
+	color: black;
+	text-decoration: none;
+    border: 1px solid black;
+}
+
+.shopping-cart-total a:hover{
+	background-color: black;
+    color: white;
+}
+
+.account-page{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+
+.form-btn{
+    display: inline-block;
+}
+
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+
+form .login1{
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 30px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+form .btn-login1{
+    width: 200px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 30px;
+    border-radius: 30px;
+    background: white;
+    font-weight: bold;
+}
+
+form .btn-login1:hover{
+    background-color: black;
+    color: white;
+}
+
+form input{
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+form .btn{
+    width: 200px;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 30px;
+    background: white;
+    font-weight: bold;
+}
+
+form .btn:hover{
+    background-color: black;
+    color: white;
+}
+
+#Login{
+    left: -300px;
+}
+
+#Register{
+    left: 0;
+}
+
+form a{
+    font-size: 12px;
+}
+
+#Indicator{
+    width: 65px;
+    border: none;
+    background: black;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(65px);
+    transition: transform 1s;
+}
+
+.contact-form{
+    max-width: 500px;
+    margin-top: 100px;
+    margin-left: 400px;
+    margin-bottom: 50px;
+    background: #f1f1f1;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 20px #000000b3;
+}
+
+.txtb{
+    border: 1px solid gray;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+.txtc{
+    border: 1px solid gray;
+    margin: 8px 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+}
+
+.txtb > .contact-name > .contact-email, .txtc textarea{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    margin-top: 6px;
+}
+
+.contact-send{
+    display: block;
+    background: black;
+    padding: 14px 0;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+}
