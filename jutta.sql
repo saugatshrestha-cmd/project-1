@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 22, 2021 at 08:29 AM
+-- Generation Time: Jul 22, 2021 at 09:02 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `jutta`
 --
+CREATE DATABASE IF NOT EXISTS `jutta` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `jutta`;
 
 -- --------------------------------------------------------
 
