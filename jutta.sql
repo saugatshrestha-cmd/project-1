@@ -1,6 +1,25 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 18, 2021 at 07:11 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.6
 
-CREATE DATABASE IF NOT EXISTS `jutta` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `jutta`;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `jutta`
+--
 
 -- --------------------------------------------------------
 
@@ -19,7 +38,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `username`, `password`) VALUES
-(1, 'saugatstha02@gmail.com', '12345');
+(1, 'something@gmail.com', '12345');
 
 -- --------------------------------------------------------
 
@@ -56,6 +75,13 @@ CREATE TABLE `customers` (
   `update_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`id`, `username`, `password`, `created_at`, `update_at`) VALUES
+(4, 'something@gmail.com', '123', '2021-09-03 19:40:30', '2021-09-03 19:40:30');
+
 -- --------------------------------------------------------
 
 --
@@ -66,7 +92,9 @@ CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `address` varchar(50) NOT NULL,
+  `phone` varchar(30) NOT NULL,
   `total` int(20) NOT NULL,
+  `pay_method` varchar(20) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -107,7 +135,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `picture`, `category_id`, `created_at`, `updated_at`) VALUES
-(1, 'Nike', 2000, 'uploads/air-max-plus.jfif.png', 1, '2021-05-25 03:13:52', '2021-05-25 03:13:52');
+(1, 'Nike Air', 3000, 'uploads/air-presto.png', 1, '2021-05-25 03:13:52', '2021-05-25 03:13:52'),
+(4, 'Nike', 2000, 'uploads/air-max-plus.jfif.png', 1, '2021-08-10 08:52:14', '2021-08-10 08:52:14'),
+(5, 'Nike', 2000, 'uploads/blazer-mid-777.jfif.png', 2, '2021-08-10 08:52:33', '2021-08-10 08:52:33'),
+(6, 'Nike', 3000, 'uploads/1.png', 1, '2021-08-10 09:26:49', '2021-08-10 09:26:49');
 
 --
 -- Indexes for dumped tables
@@ -169,23 +200,27 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
