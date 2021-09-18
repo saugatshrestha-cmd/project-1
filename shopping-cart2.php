@@ -1,6 +1,8 @@
 <html>
     <?php
     session_start();
+        include("handler/customersession.php");
+        include("partials/connect.php");
         include("partials/head.php");
     ?>
 <body>
@@ -17,8 +19,8 @@
                 <th>Update</th>
             </tr>
             <?php
-            $total=0;
                 if(isset($_SESSION['cart'])){
+                    $total=0;
                     foreach($_SESSION['cart'] as $key => $value){
                         $total=$total+$value['item_price']*$value['quantity'];
             ?>
@@ -52,10 +54,43 @@
                 <tr>
                     <td>Total</td>
                     <td>Rs <?php echo $total ?></td>
-                    <td><button onclick="location.href='shopping-cart2.php'">Proceed to Checkout</button></td>
                 </tr>
             </table>
         </div>
+        <form action="handler/orderhandler.php" method="POST">
+        <div class="shipping">
+            <table>
+            <tr>
+                <td class="ship">Shipping:</td>
+            </tr>
+                <tr>
+				    <td>
+					    Address:
+                        <input class="address" type="text" name="address" placeholder="Address">
+				    </td>
+                </tr>
+                <tr>
+				    <td>
+					    Phone number:
+                        <input class="zipcode" type="text" name="phone" placeholder="Phone number">
+                    </td>
+				</tr>
+                <tr>
+				<td>
+					Payment method:<select class="select" name="payment">
+						<option name="cash">Cash on delievery</option>
+						<option name="esewa">esewa</option>
+					</select>
+                </td>
+                </tr>
+                <tr>
+                <td><input type="hidden" name="total" value="<?php echo $total?>"></td>
+                </tr>
+               <tr>
+                   <td><button name="placeorder">Place Order</button></td></tr>
+            </table>
+        </div>
+        </form>
     </div>
 </main>
     <?php

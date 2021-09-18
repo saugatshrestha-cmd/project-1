@@ -16,17 +16,17 @@
                             <div class="form-btn">
                                 <span onclick="login()">Login</span>
                                 <span onclick="register()">Register</span>
-                                <hr id="Indicator" class="">
+                                <hr id="Indicator">
                             </div>
-                            <form id="Login">
-                                <input type="text" placeholder="Username" class="login1">
-                                <input type="password" placeholder="Password" class="login1">
-                                <button type="submit" class="btn-login1">Login</button>
+                            <form action="handler/customerlogin.php" id="Login" method="POST">
+                                <input type="email" placeholder="Email" name="email" class="login1">
+                                <input type="password" placeholder="Password" name="password" class="login1">
+                                <button type="submit" class="btn-login1" name="login">Login</button>
                             </form>
-                            <form id="Register">
-                                <input type="text" placeholder="Username">
-                                <input type="email" placeholder="Email">
-                                <input type="password" placeholder="Password">
+                            <form action="handler/customerregister.php" id="Register" method="POST">
+                                <input type="email" placeholder="Email" name="email">
+                                <input type="password" placeholder="Password" name="password">
+                                <input type="password" placeholder="Password" name="password2">
                                 <button type="submit" class="btn">Register</button>
                             </form>
                         </div>
