@@ -1,5 +1,6 @@
 <?php
-    include("partials/connect.php");
+    include("connect.php");
+    include("head.php");
 ?>
 <header>
             <!--Start Navbar-->
@@ -12,22 +13,36 @@
                     <a href="men.php">Men</a>
                     <a href="women.php">Women</a>
                 </div>
+                <?php
+                if(!empty($_SESSION['cart'])){
+                    $qty=count($_SESSION['cart']);
+                
+                ?>
+                <div class="navbar-right">
+                    <a href="shopping-cart.php" class="cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge"><?php echo $qty?></span>
+                    </a>
+                </div>
+                <?php }else{?>
                 <div class="navbar-right">
                     <a href="shopping-cart.php" class="cart">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="badge">0</span>
                     </a>
                 </div>
+                <?php }?>
                 <div>
-                    <a class="search-box" href="#">
-                        <input type="search" placeholder="Search . . ." class="search">
-                        <i class="fas fa-search"></i>
+                    <?php
+                    if(!empty($_SESSION['email'])) {?>
+                    <a href="handler/customerlogout.php">
+                        <button class="logout">Logout</button>
                     </a>
-                </div>
-                <div>
+                    <?php }else{?>
                     <a href="login.php">
-                        <button class="login">Login / Signup</button>
+                        <button class="login">Login</button>
                     </a>
+                    <?php }?>
                 </div>
             </div>
             <!--End Navbar-->
