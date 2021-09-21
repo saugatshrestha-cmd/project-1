@@ -31,23 +31,23 @@
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="col-sm-9">
-      <a href="products.php">
-            <button style="color: green;">Add Products</button>
-      </a>
-      <hr>
+        <?php
+        include('../partials/connect.php');
+        $sql="Select * from orders";
+        $results=$connect->query($sql);
+        while($final=$results->fetch_assoc()){ ?>
+            <a href="ordershow.php?pro_id=<?php echo $final['id']?>">
+            <h3><?php echo $final['id'] ?>: <?php echo $final['phone']?> <br>Total:<?php echo $final['total']?></h3><br>
+            </a>
+            <a href="orderdelete.php?del_id=<?php echo $final['id']?>">
+            <button style="color:red">Delete</button>
+            </a><hr>
+        <?php }
+        ?>
       </div>
-      <div class="col-sm-9">
-      <a href="categories.php">
-            <button style="color: green;">Add Categories</button>
-      </a>
-      <hr>
-      </div>
-      <div class="col-sm-9">
-      <a href="orders.php">
-            <button style="color: green;">View Orders</button>
-      </a>
-      <hr>
-      </div>
+        <div class="col-sm-3">
+            
+        </div>
     </section>
     <!-- /.content -->
   </div>

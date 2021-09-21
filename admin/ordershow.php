@@ -31,22 +31,16 @@
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="col-sm-9">
-      <a href="products.php">
-            <button style="color: green;">Add Products</button>
-      </a>
-      <hr>
-      </div>
-      <div class="col-sm-9">
-      <a href="categories.php">
-            <button style="color: green;">Add Categories</button>
-      </a>
-      <hr>
-      </div>
-      <div class="col-sm-9">
-      <a href="orders.php">
-            <button style="color: green;">View Orders</button>
-      </a>
-      <hr>
+        <?php
+        include('../partials/connect.php');
+        $id=$_GET['pro_id'];
+        $sql="SELECT * from orders WHERE id='$id'";
+        $results=$connect->query($sql);
+        $final=$results->fetch_assoc();
+        ?>
+        <h3>CustomerNo: <?php echo $final['customer_id']?> </h3><hr><br>
+        <h3>Total: <?php echo $final['total']?> </h3><hr><br>
+        <h3>Address: <?php echo $final['address']?> </h3><hr><br>
       </div>
     </section>
     <!-- /.content -->
