@@ -1,13 +1,9 @@
 <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.18
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
-    reserved.
-  </footer>
+  Copyright &copy 2020 JuttaPasal. All Rights Reserved
+</footer>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark" style="display: none;">
+ <!-- Control Sidebar -->
+ <aside class="control-sidebar control-sidebar-dark" style="display: none;">
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
       <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
