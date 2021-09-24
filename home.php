@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <?php
+    session_start();
         include("partials/head.php");
     ?>
     <body>
@@ -12,7 +13,7 @@
                 <div class="col">
                 <?php
             include("partials/connect.php");
-            $sql="Select * from products where id = 6";
+            $sql="Select * from products where id = 7";
             $results=$connect->query($sql);
             while($final=$results->fetch_assoc()){    
             ?>
@@ -68,8 +69,8 @@
         <section class="cards">
         <?php
             include("partials/connect.php");
-            $sql="Select * from products where category_id = 2";
-            $results=$connect->query($sql);
+            $sql2="Select * from products where category_id = 2";
+            $results=$connect->query($sql2);
             while($final=$results->fetch_assoc()){    
         ?>
             <div class="container">

@@ -38,6 +38,6 @@
     <?php
         include("partials/footer.php");
     ?>
-    <script src="yo.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

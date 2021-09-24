@@ -3,6 +3,7 @@ body, html {
 	padding: 0;
 	overflow-x: hidden;
 }
+/* Navigation bar */
 .navbar{
     background-color: white;
     padding: 1px 4px;
@@ -82,34 +83,6 @@ i:hover{
     border-radius: 50%;
 }
 
-.search-box{
-    position: relative;
-    top: 3px;
-    left: 10px;
-    transition: all 1s;
-    width: 50px;
-    background: white;
-    box-sizing: border-box;
-    border-radius: 25px;
-    border: 4px solid white;
-    padding: 5px;
-}
-
-.search{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;;
-    height: 42.5px;
-    line-height: 30px;
-    outline: 0;
-    border: 0;
-    display: none;
-    font-size: 1em;
-    border-radius: 20px;
-    padding: 0 20px;
-}
-
 .fas{
     box-sizing: border-box;
     padding: 10px;
@@ -123,23 +96,6 @@ i:hover{
     text-align: center;
     font-size: 1.2em;
     transition: all 1s;
-}
-
-.search-box:hover{
-    width: 200px;
-    cursor: pointer;
-}
-
-.search-box:hover input{
-    display: block;
-    box-sizing: border-box;
-    border-radius: 25px;
-    border: 4px solid black;
-}
-
-.search-box:hover .fas{
-    background: #07051a;
-    color: white;
 }
 
 .login{
@@ -175,7 +131,7 @@ i:hover{
     background: black;
     color: white;
 }
-
+/* Main Product page */
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -256,6 +212,8 @@ i:hover{
 		transform: translateY(0);
 	}
 }
+
+/* Products Page */
 
 .title{
     text-align: center;
@@ -406,6 +364,8 @@ i:hover{
     background: #9bdc28;
 }
 
+/* Footer Page */
+
 footer{
     position: relative;
     width: 100%;
@@ -488,6 +448,8 @@ footer .cntr h2{
     text-align: center;
     color: #999;
 }
+
+/* Shopping-cart Page */
 
 .small-container{
     max-width: 1080px;
@@ -594,6 +556,8 @@ td .zipcode{
     width:150px
 }
 
+/* Login Page */
+
 .account-page{
     margin-top: 100px;
     margin-bottom: 50px;
@@ -698,50 +662,7 @@ form a{
     transition: transform 1s;
 }
 
-.contact-form{
-    max-width: 500px;
-    margin-top: 100px;
-    margin-left: 400px;
-    margin-bottom: 50px;
-    background: #f1f1f1;
-    padding: 30px 40px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 0 20px #000000b3;
-}
-
-.txtb{
-    border: 1px solid gray;
-    margin: 8px 0;
-    border-radius: 8px;
-}
-
-.txtc{
-    border: 1px solid gray;
-    margin: 8px 0;
-    padding: 12px 18px;
-    border-radius: 8px;
-}
-
-.txtb > .contact-name > .contact-email, .txtc textarea{
-    width: 100%;
-    border: none;
-    background: none;
-    outline: none;
-    margin-top: 6px;
-}
-
-.contact-send{
-    display: block;
-    background: black;
-    padding: 14px 0;
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top: 8px;
-    width: 100%;
-}
+/* Esewa Page */
 
 .esewa{
     margin-top: 100px;

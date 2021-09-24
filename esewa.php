@@ -11,7 +11,7 @@
         include("partials/header.php");
     ?>
     <div class="esewa">
-    <form action=<?php echo $epay_url?> method="POST">
+    <form action="<?php echo $epay_url?>" method="POST">
     <input value="<?php echo $total;?>" name="tAmt" type="hidden">
     <input value="<?php echo $total;?>" name="amt" type="hidden">
     <input value="0" name="txAmt" type="hidden">
