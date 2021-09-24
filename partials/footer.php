@@ -18,5 +18,5 @@
             </div>
 </footer>
 <div class="copyrighttext">
-    <p>Copyright &copy 2020 Jutta. All Rights Reserved</p>
+    <p>Copyright &copy 2020 JuttaPasal. All Rights Reserved</p>
 </div>

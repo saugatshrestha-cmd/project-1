@@ -6,7 +6,7 @@
             <!--Start Navbar-->
             <div class="navbar">
                 <a href="home.php" class="logo">
-                    Jutta
+                    JuttaPasal
                 </a>
                 <div class="navbar-right menu">
                     <a href="home.php">Home</a>
