@@ -11,7 +11,6 @@
   include('adminpartials/header.php');
   include('adminpartials/aside.php');
   ?>
-  <!-- Left side column. contains the logo and sidebar -->
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -41,6 +40,8 @@
         <h3>CustomerNo: <?php echo $final['customer_id']?> </h3><hr><br>
         <h3>Total: <?php echo $final['total']?> </h3><hr><br>
         <h3>Address: <?php echo $final['address']?> </h3><hr><br>
+        <h3>ProductNo: <?php echo $final['product_id']?> </h3><hr><br>
+        <h3>Quantity: <?php echo $final['quantity']?> </h3><hr><br>
       </div>
     </section>
     <!-- /.content -->
